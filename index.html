@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="es">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Iniciativas de IA</title>
+<title>Beecker — Iniciativas de IA</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -86,7 +87,7 @@ main{max-width:1200px;margin:0 auto;padding:24px 20px 64px}
 
 <header>
   <div class="hdr-left">
-    <h1>Iniciativas de Automatización con IA</h1>
+    <h1>Beecker — Iniciativas de Automatización con IA</h1>
     <p>Haz clic en cualquier descripción para editarla · los cambios se guardan automáticamente</p>
   </div>
   <div style="display:flex;gap:8px">
@@ -96,558 +97,48 @@ main{max-width:1200px;margin:0 auto;padding:24px 20px 64px}
 </header>
 
 <div class="tab-bar">
-  <div class="tab" onclick="showTab('iniciativas')">Iniciativas</div>
-  <div class="tab active" onclick="showTab('proveedores')">Comparación de proveedores</div>
+  <div class="tab active" onclick="showTab('iniciativas')">Iniciativas</div>
+  <div class="tab" onclick="showTab('proveedores')">Comparación de proveedores</div>
 </div>
 
 <!-- PAGE 1: INICIATIVAS -->
-<div id="page-iniciativas" class="page">
+<div id="page-iniciativas" class="page active">
 <main>
   <div class="hint">Selecciona un área para filtrar las iniciativas</div>
   <div class="area-boxes" id="area-boxes">
     <div class="area-box active" data-filter="all" style="background:#f5f4f0;color:#444441">
-      <div class="area-box-icon">🗂</div><div class="area-box-name">Todas</div><div class="area-box-count" id="cnt-all">15 iniciativas</div>
+      <div class="area-box-icon">🗂</div><div class="area-box-name">Todas</div><div class="area-box-count" id="cnt-all"></div>
     </div>
     <div class="area-box" data-filter="finanzas" style="background:#e6f1fb;color:#185FA5">
-      <div class="area-box-icon">💰</div><div class="area-box-name">Finanzas</div><div class="area-box-count" id="cnt-finanzas">2 iniciativas</div>
+      <div class="area-box-icon">💰</div><div class="area-box-name">Finanzas</div><div class="area-box-count" id="cnt-finanzas"></div>
     </div>
     <div class="area-box" data-filter="ventas" style="background:#faece7;color:#993C1D">
-      <div class="area-box-icon">📈</div><div class="area-box-name">Ventas</div><div class="area-box-count" id="cnt-ventas">3 iniciativas</div>
+      <div class="area-box-icon">📈</div><div class="area-box-name">Ventas</div><div class="area-box-count" id="cnt-ventas"></div>
     </div>
     <div class="area-box" data-filter="rrhh" style="background:#eeedfe;color:#534AB7">
-      <div class="area-box-icon">👥</div><div class="area-box-name">RRHH</div><div class="area-box-count" id="cnt-rrhh">4 iniciativas</div>
+      <div class="area-box-icon">👥</div><div class="area-box-name">RRHH</div><div class="area-box-count" id="cnt-rrhh"></div>
     </div>
     <div class="area-box" data-filter="compras" style="background:#e1f5ee;color:#0F6E56">
-      <div class="area-box-icon">📦</div><div class="area-box-name">Compras / Supply</div><div class="area-box-count" id="cnt-compras">3 iniciativas</div>
+      <div class="area-box-icon">📦</div><div class="area-box-name">Compras / Supply</div><div class="area-box-count" id="cnt-compras"></div>
     </div>
     <div class="area-box" data-filter="pcp" style="background:#faeeda;color:#854F0B">
-      <div class="area-box-icon">⚙️</div><div class="area-box-name">Producción / PCP</div><div class="area-box-count" id="cnt-pcp">2 iniciativas</div>
+      <div class="area-box-icon">⚙️</div><div class="area-box-name">Producción / PCP</div><div class="area-box-count" id="cnt-pcp"></div>
     </div>
     <div class="area-box" data-filter="calidad" style="background:#fbeaf0;color:#993556">
-      <div class="area-box-icon">✅</div><div class="area-box-name">Calidad</div><div class="area-box-count" id="cnt-calidad">1 iniciativa</div>
+      <div class="area-box-icon">✅</div><div class="area-box-name">Calidad</div><div class="area-box-count" id="cnt-calidad"></div>
     </div>
   </div>
   <div class="section-label">⭐ Prioridad alta — quick wins</div>
-  <div class="grid" id="grid-high"><div class="card visible" data-area="rrhh" data-type="continuo"><div class="card-inner">
-    <div class="stripe" style="background:#534AB7"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Screening y agendado de candidatos</div><span class="badge badge-continuo">Agente continuo</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-c1">Hoy RRHH revisa manualmente 300–400 CVs al mes, pide documentos uno a uno y agenda entrevistas por correo. El proceso tarda días antes de siquiera hablar con un candidato, y el talento elige la oferta que primero llega.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#534AB7;border-color:#534AB755">RRHH</span>
-        <span class="tag">300–400 candidatos/mes · proceso 100% manual</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:90%;background:#1D9E75"></div></div><span class="bar-val">90%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:30%;background:#B4B2A9"></div></div><span class="bar-val">30%</span></div>
-      </div>
-    </div>
-  </div></div><div class="card visible" data-area="compras" data-type="continuo"><div class="card-inner">
-    <div class="stripe" style="background:#0F6E56"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Automatización de listas de embarque</div><span class="badge badge-continuo">Agente continuo</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-c2">8 personas dedican 1h 30min cada una diariamente a construir listas de embarque en Excel. Es su función principal pero es trabajo de copiado y armado, no de planeación. Con 250 listas semanales, el equipo no da abasto y hay errores de coordinación entre planta y comercial.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#0F6E56;border-color:#0F6E5655">Compras / Supply</span>
-        <span class="tag">250 listas/semana · 8 personas × 1h 30min</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:85%;background:#1D9E75"></div></div><span class="bar-val">85%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:40%;background:#B4B2A9"></div></div><span class="bar-val">40%</span></div>
-      </div>
-    </div>
-  </div></div><div class="card visible" data-area="finanzas" data-type="continuo"><div class="card-inner">
-    <div class="stripe" style="background:#185FA5"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Validación documental en Procure to Pay</div><span class="badge badge-continuo">Agente continuo</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-c3">Cada factura, orden de compra y proveedor nuevo requiere validar documentos (REPSE, CFI y otros) de forma manual. Además, hoy no existe visibilidad del histórico de precios por proveedor, lo que impide comparar si el precio de la factura entrante está alineado con lo que se ha pagado antes. Con 1,600 facturas y 1,500–2,000 órdenes al mes, el equipo no tiene forma de detectar desviaciones de precio a tiempo.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#185FA5;border-color:#185FA555">Finanzas</span>
-        <span class="tag">1,500–2,000 OC/mes · 1,600 facturas · 40 provs. nuevos</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:88%;background:#1D9E75"></div></div><span class="bar-val">88%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:45%;background:#B4B2A9"></div></div><span class="bar-val">45%</span></div>
-      </div>
-    </div>
-  </div></div><div class="card visible" data-area="ventas" data-type="continuo"><div class="card-inner">
-    <div class="stripe" style="background:#993C1D"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Validación de precios al recibir PO</div><span class="badge badge-continuo">Agente continuo</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-c4">Se le envía una cotización al cliente con un precio determinado, pero si cambia el mes y la lista de precios se actualiza, el precio original puede quedar desactualizado. Cuando llega la orden de compra, alguien tiene que revisar manualmente que cada precio del PO coincida con la lista vigente. Si no se detecta la discrepancia a tiempo, hay que regresar con el cliente a actualizar la cotización, generando reproceso comercial y retrasos en producción.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#993C1D;border-color:#993C1D55">Ventas</span>
-        <span class="tag">Lista de precios en nube · revisión manual actual</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:80%;background:#1D9E75"></div></div><span class="bar-val">80%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:20%;background:#B4B2A9"></div></div><span class="bar-val">20%</span></div>
-      </div>
-    </div>
-  </div></div><div class="card visible" data-area="rrhh" data-type="continuo"><div class="card-inner">
-    <div class="stripe" style="background:#534AB7"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Screening y agendado de candidatos</div><span class="badge badge-continuo">Agente continuo</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-c1">Hoy RRHH revisa manualmente 300–400 CVs al mes, pide documentos uno a uno y agenda entrevistas por correo. El proceso tarda días antes de siquiera hablar con un candidato, y el talento elige la oferta que primero llega.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#534AB7;border-color:#534AB755">RRHH</span>
-        <span class="tag">300–400 candidatos/mes · proceso 100% manual</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:90%;background:#1D9E75"></div></div><span class="bar-val">90%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:30%;background:#B4B2A9"></div></div><span class="bar-val">30%</span></div>
-      </div>
-    </div>
-  </div></div><div class="card visible" data-area="compras" data-type="continuo"><div class="card-inner">
-    <div class="stripe" style="background:#0F6E56"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Automatización de listas de embarque</div><span class="badge badge-continuo">Agente continuo</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-c2">8 personas dedican 1h 30min cada una diariamente a construir listas de embarque en Excel. Es su función principal pero es trabajo de copiado y armado, no de planeación. Con 250 listas semanales, el equipo no da abasto y hay errores de coordinación entre planta y comercial.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#0F6E56;border-color:#0F6E5655">Compras / Supply</span>
-        <span class="tag">250 listas/semana · 8 personas × 1h 30min</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:85%;background:#1D9E75"></div></div><span class="bar-val">85%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:40%;background:#B4B2A9"></div></div><span class="bar-val">40%</span></div>
-      </div>
-    </div>
-  </div></div><div class="card visible" data-area="finanzas" data-type="continuo"><div class="card-inner">
-    <div class="stripe" style="background:#185FA5"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Validación documental en Procure to Pay</div><span class="badge badge-continuo">Agente continuo</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-c3">Cada factura, orden de compra y proveedor nuevo requiere validar documentos (REPSE, CFI y otros) de forma manual. Además, hoy no existe visibilidad del histórico de precios por proveedor, lo que impide comparar si el precio de la factura entrante está alineado con lo que se ha pagado antes. Con 1,600 facturas y 1,500–2,000 órdenes al mes, el equipo no tiene forma de detectar desviaciones de precio a tiempo.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#185FA5;border-color:#185FA555">Finanzas</span>
-        <span class="tag">1,500–2,000 OC/mes · 1,600 facturas · 40 provs. nuevos</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:88%;background:#1D9E75"></div></div><span class="bar-val">88%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:45%;background:#B4B2A9"></div></div><span class="bar-val">45%</span></div>
-      </div>
-    </div>
-  </div></div><div class="card visible" data-area="ventas" data-type="continuo"><div class="card-inner">
-    <div class="stripe" style="background:#993C1D"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Validación de precios al recibir PO</div><span class="badge badge-continuo">Agente continuo</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-c4">Se le envía una cotización al cliente con un precio determinado, pero si cambia el mes y la lista de precios se actualiza, el precio original puede quedar desactualizado. Cuando llega la orden de compra, alguien tiene que revisar manualmente que cada precio del PO coincida con la lista vigente. Si no se detecta la discrepancia a tiempo, hay que regresar con el cliente a actualizar la cotización, generando reproceso comercial y retrasos en producción.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#993C1D;border-color:#993C1D55">Ventas</span>
-        <span class="tag">Lista de precios en nube · revisión manual actual</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:80%;background:#1D9E75"></div></div><span class="bar-val">80%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:20%;background:#B4B2A9"></div></div><span class="bar-val">20%</span></div>
-      </div>
-    </div>
-  </div></div></div>
+  <div class="grid" id="grid-high"></div>
   <div class="section-label">Prioridad media — alto valor estructural</div>
-  <div class="grid" id="grid-mid"><div class="card visible" data-area="compras" data-type="continuo"><div class="card-inner">
-    <div class="stripe" style="background:#0F6E56"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Dashboard de recompras y control min/max</div><span class="badge badge-continuo">Agente continuo</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-m2">Una sola persona gestiona todas las recompras y revisa niveles de inventario, pero solo puede hacerlo una vez a la semana porque no da abasto. Esto provoca que se llegue a mínimos sin activar reposición a tiempo. La meta es bajar inventario de MP de 60 a 30–45 días.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#0F6E56;border-color:#0F6E5655">Compras / Supply</span>
-        <span class="tag">1 persona es el cuello de botella · actualiza 1 vez/semana</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:82%;background:#1D9E75"></div></div><span class="bar-val">82%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:50%;background:#B4B2A9"></div></div><span class="bar-val">50%</span></div>
-      </div>
-    </div>
-  </div></div><div class="card visible" data-area="rrhh" data-type="continuo"><div class="card-inner">
-    <div class="stripe" style="background:#534AB7"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Gestión de incidencias y nómina</div><span class="badge badge-continuo">Agente continuo</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-m4">Cada quincena, el supervisor compara asistencias contra Excel y el resultado se copia y pega al sistema de nómina (Worky). Es un proceso de alta fricción, propenso a errores, y consume tiempo de supervisores que deberían estar en piso.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#534AB7;border-color:#534AB755">RRHH</span>
-        <span class="tag">Ciclo quincenal · supervisor vs excel · copia/pega manual</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:70%;background:#185FA5"></div></div><span class="bar-val">70%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:55%;background:#B4B2A9"></div></div><span class="bar-val">55%</span></div>
-      </div>
-    </div>
-  </div></div><div class="card visible" data-area="pcp" data-type="continuo"><div class="card-inner">
-    <div class="stripe" style="background:#854F0B"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Consolidación de reportes Epicor + simulaciones de capacidad</div><span class="badge badge-continuo">Agente continuo</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-m5">Jacinto consolida manualmente 8 reportes de Epicor solo para tener la data lista antes de poder analizar algo. El verdadero valor está después: hacer simulaciones de capacidad y evaluar desviaciones entre tiempos estándar y tiempos reales. Automatizar la extracción y consolidación de datos libera ese tiempo para que el equipo se enfoque en el análisis, no en el armado del insumo.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#854F0B;border-color:#854F0B55">Producción / PCP</span>
-        <span class="tag">8 reportes manuales · cálculo de fases · alertas preventivas</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:72%;background:#185FA5"></div></div><span class="bar-val">72%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:60%;background:#B4B2A9"></div></div><span class="bar-val">60%</span></div>
-      </div>
-    </div>
-  </div></div><div class="card visible" data-area="ventas" data-type="continuo"><div class="card-inner">
-    <div class="stripe" style="background:#993C1D"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Actualización automática de fechas de entrega y producción en Epicor</div><span class="badge badge-continuo">Agente continuo</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-m7">Cuando ventas o producción necesitan cambiar la fecha de entrega o de producción de un pedido, hoy hay que actualizar manualmente cada etapa del proceso en Epicor uno por uno. Esto toma entre 2 y 3 horas por ajuste. En el sistema anterior (Libra) la confirmación de fecha de entrega era automática al revisar el open order — en Epicor ese flujo no está configurado. El resultado es que las fechas en el sistema no reflejan la realidad en tiempo real, generando descoordinación entre ventas, producción y el cliente.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#993C1D;border-color:#993C1D55">Ventas</span>
-        <span class="tag">Actualización manual · 2–3 horas por cambio de fecha</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:76%;background:#185FA5"></div></div><span class="bar-val">76%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:50%;background:#B4B2A9"></div></div><span class="bar-val">50%</span></div>
-      </div>
-    </div>
-  </div></div><div class="card visible" data-area="ventas" data-type="continuo"><div class="card-inner">
-    <div class="stripe" style="background:#993C1D"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Precalificación de leads entrantes (inbound)</div><span class="badge badge-continuo">Agente continuo</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-m6">Casi el 100% del negocio es inbound pero no hay filtro inicial: cualquier correo o llamada entra como lead y el equipo comercial termina atendiendo oportunidades que no califican. En un periodo de 3 meses se generan hasta 200 cotizaciones (incluyendo clientes actuales), de las cuales 60–70 son nuevas por mes para unas 700 piezas. Sin un prefiltro que califique antes de cotizar, el equipo invierte tiempo en solicitudes que no van a cerrar o que no son rentables.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#993C1D;border-color:#993C1D55">Ventas</span>
-        <span class="tag">Casi 100% inbound · sin filtro estructurado hoy</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:68%;background:#888780"></div></div><span class="bar-val">68%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:40%;background:#B4B2A9"></div></div><span class="bar-val">40%</span></div>
-      </div>
-    </div>
-  </div></div><div class="card visible" data-area="calidad" data-type="continuo"><div class="card-inner">
-    <div class="stripe" style="background:#993556"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Análisis histórico de rechazos (2023–2025)</div><span class="badge badge-continuo">Agente continuo</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-p1">Calidad tiene 5,000 casos de rechazo en 3 fuentes distintas, con 10 campos por registro, sin consolidar ni analizar. Fernando necesita identificar causas raíz y patrones preventivos pero la data está dispersa y en formatos diferentes.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#993556;border-color:#99355655">Calidad</span>
-        <span class="tag">5,000 casos · 3 fuentes · 10 campos por caso</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:65%;background:#888780"></div></div><span class="bar-val">65%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:30%;background:#B4B2A9"></div></div><span class="bar-val">30%</span></div>
-      </div>
-    </div>
-  </div></div><div class="card visible" data-area="pcp" data-type="continuo"><div class="card-inner">
-    <div class="stripe" style="background:#854F0B"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Visibilidad de inventario en planta en tiempo real</div><span class="badge badge-continuo">Agente continuo</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-p3">Eduardo (planta ATZ) no tiene visibilidad en Epicor de cuánto material hay en cada etapa del proceso productivo. Se hacen auditorías manuales para verificar que lo del sistema coincide con el piso. Sin esta visibilidad continua no se puede automatizar la planeación de producción.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#854F0B;border-color:#854F0B55">Producción / PCP</span>
-        <span class="tag">Sin visibilidad real en Epicor · auditorías manuales</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:55%;background:#888780"></div></div><span class="bar-val">55%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:25%;background:#B4B2A9"></div></div><span class="bar-val">25%</span></div>
-      </div>
-    </div>
-  </div></div><div class="card visible" data-area="rrhh" data-type="continuo"><div class="card-inner">
-    <div class="stripe" style="background:#534AB7"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Verificación de vencimiento de contratos temporales</div><span class="badge badge-continuo">Agente continuo</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-p5">Hoy alguien tiene que revisar manualmente qué empleados están próximos a cumplir 3 meses para decidir si pasan a contrato indefinido o se da de baja. Son ~15 minutos diarios pero el riesgo es alto: si se pasa la fecha sin actuar hay implicaciones legales. El agente monitora las fechas y manda automáticamente un aviso al manager y a RH con tiempo suficiente para tomar la decisión y gestionar el trámite.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#534AB7;border-color:#534AB755">RRHH</span>
-        <span class="tag">Revisión manual diaria · riesgo legal si se vence plazo</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:72%;background:#185FA5"></div></div><span class="bar-val">72%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:20%;background:#B4B2A9"></div></div><span class="bar-val">20%</span></div>
-      </div>
-    </div>
-  </div></div><div class="card visible" data-area="compras" data-type="continuo"><div class="card-inner">
-    <div class="stripe" style="background:#0F6E56"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Dashboard de recompras y control min/max</div><span class="badge badge-continuo">Agente continuo</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-m2">Una sola persona gestiona todas las recompras y revisa niveles de inventario, pero solo puede hacerlo una vez a la semana porque no da abasto. Esto provoca que se llegue a mínimos sin activar reposición a tiempo. La meta es bajar inventario de MP de 60 a 30–45 días.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#0F6E56;border-color:#0F6E5655">Compras / Supply</span>
-        <span class="tag">1 persona es el cuello de botella · actualiza 1 vez/semana</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:82%;background:#1D9E75"></div></div><span class="bar-val">82%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:50%;background:#B4B2A9"></div></div><span class="bar-val">50%</span></div>
-      </div>
-    </div>
-  </div></div><div class="card visible" data-area="rrhh" data-type="continuo"><div class="card-inner">
-    <div class="stripe" style="background:#534AB7"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Gestión de incidencias y nómina</div><span class="badge badge-continuo">Agente continuo</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-m4">Cada quincena, el supervisor compara asistencias contra Excel y el resultado se copia y pega al sistema de nómina (Worky). Es un proceso de alta fricción, propenso a errores, y consume tiempo de supervisores que deberían estar en piso.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#534AB7;border-color:#534AB755">RRHH</span>
-        <span class="tag">Ciclo quincenal · supervisor vs excel · copia/pega manual</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:70%;background:#185FA5"></div></div><span class="bar-val">70%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:55%;background:#B4B2A9"></div></div><span class="bar-val">55%</span></div>
-      </div>
-    </div>
-  </div></div><div class="card visible" data-area="pcp" data-type="continuo"><div class="card-inner">
-    <div class="stripe" style="background:#854F0B"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Consolidación de reportes Epicor + simulaciones de capacidad</div><span class="badge badge-continuo">Agente continuo</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-m5">Jacinto consolida manualmente 8 reportes de Epicor solo para tener la data lista antes de poder analizar algo. El verdadero valor está después: hacer simulaciones de capacidad y evaluar desviaciones entre tiempos estándar y tiempos reales. Automatizar la extracción y consolidación de datos libera ese tiempo para que el equipo se enfoque en el análisis, no en el armado del insumo.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#854F0B;border-color:#854F0B55">Producción / PCP</span>
-        <span class="tag">8 reportes manuales · cálculo de fases · alertas preventivas</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:72%;background:#185FA5"></div></div><span class="bar-val">72%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:60%;background:#B4B2A9"></div></div><span class="bar-val">60%</span></div>
-      </div>
-    </div>
-  </div></div><div class="card visible" data-area="ventas" data-type="continuo"><div class="card-inner">
-    <div class="stripe" style="background:#993C1D"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Actualización automática de fechas de entrega y producción en Epicor</div><span class="badge badge-continuo">Agente continuo</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-m7">Cuando ventas o producción necesitan cambiar la fecha de entrega o de producción de un pedido, hoy hay que actualizar manualmente cada etapa del proceso en Epicor uno por uno. Esto toma entre 2 y 3 horas por ajuste. En el sistema anterior (Libra) la confirmación de fecha de entrega era automática al revisar el open order — en Epicor ese flujo no está configurado. El resultado es que las fechas en el sistema no reflejan la realidad en tiempo real, generando descoordinación entre ventas, producción y el cliente.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#993C1D;border-color:#993C1D55">Ventas</span>
-        <span class="tag">Actualización manual · 2–3 horas por cambio de fecha</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:76%;background:#185FA5"></div></div><span class="bar-val">76%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:50%;background:#B4B2A9"></div></div><span class="bar-val">50%</span></div>
-      </div>
-    </div>
-  </div></div><div class="card visible" data-area="ventas" data-type="continuo"><div class="card-inner">
-    <div class="stripe" style="background:#993C1D"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Precalificación de leads entrantes (inbound)</div><span class="badge badge-continuo">Agente continuo</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-m6">Casi el 100% del negocio es inbound pero no hay filtro inicial: cualquier correo o llamada entra como lead y el equipo comercial termina atendiendo oportunidades que no califican. En un periodo de 3 meses se generan hasta 200 cotizaciones (incluyendo clientes actuales), de las cuales 60–70 son nuevas por mes para unas 700 piezas. Sin un prefiltro que califique antes de cotizar, el equipo invierte tiempo en solicitudes que no van a cerrar o que no son rentables.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#993C1D;border-color:#993C1D55">Ventas</span>
-        <span class="tag">Casi 100% inbound · sin filtro estructurado hoy</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:68%;background:#888780"></div></div><span class="bar-val">68%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:40%;background:#B4B2A9"></div></div><span class="bar-val">40%</span></div>
-      </div>
-    </div>
-  </div></div><div class="card visible" data-area="calidad" data-type="continuo"><div class="card-inner">
-    <div class="stripe" style="background:#993556"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Análisis histórico de rechazos (2023–2025)</div><span class="badge badge-continuo">Agente continuo</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-p1">Calidad tiene 5,000 casos de rechazo en 3 fuentes distintas, con 10 campos por registro, sin consolidar ni analizar. Fernando necesita identificar causas raíz y patrones preventivos pero la data está dispersa y en formatos diferentes.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#993556;border-color:#99355655">Calidad</span>
-        <span class="tag">5,000 casos · 3 fuentes · 10 campos por caso</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:65%;background:#888780"></div></div><span class="bar-val">65%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:30%;background:#B4B2A9"></div></div><span class="bar-val">30%</span></div>
-      </div>
-    </div>
-  </div></div><div class="card visible" data-area="pcp" data-type="continuo"><div class="card-inner">
-    <div class="stripe" style="background:#854F0B"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Visibilidad de inventario en planta en tiempo real</div><span class="badge badge-continuo">Agente continuo</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-p3">Eduardo (planta ATZ) no tiene visibilidad en Epicor de cuánto material hay en cada etapa del proceso productivo. Se hacen auditorías manuales para verificar que lo del sistema coincide con el piso. Sin esta visibilidad continua no se puede automatizar la planeación de producción.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#854F0B;border-color:#854F0B55">Producción / PCP</span>
-        <span class="tag">Sin visibilidad real en Epicor · auditorías manuales</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:55%;background:#888780"></div></div><span class="bar-val">55%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:25%;background:#B4B2A9"></div></div><span class="bar-val">25%</span></div>
-      </div>
-    </div>
-  </div></div><div class="card visible" data-area="rrhh" data-type="continuo"><div class="card-inner">
-    <div class="stripe" style="background:#534AB7"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Verificación de vencimiento de contratos temporales</div><span class="badge badge-continuo">Agente continuo</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-p5">Hoy alguien tiene que revisar manualmente qué empleados están próximos a cumplir 3 meses para decidir si pasan a contrato indefinido o se da de baja. Son ~15 minutos diarios pero el riesgo es alto: si se pasa la fecha sin actuar hay implicaciones legales. El agente monitora las fechas y manda automáticamente un aviso al manager y a RH con tiempo suficiente para tomar la decisión y gestionar el trámite.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#534AB7;border-color:#534AB755">RRHH</span>
-        <span class="tag">Revisión manual diaria · riesgo legal si se vence plazo</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:72%;background:#185FA5"></div></div><span class="bar-val">72%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:20%;background:#B4B2A9"></div></div><span class="bar-val">20%</span></div>
-      </div>
-    </div>
-  </div></div></div>
+  <div class="grid" id="grid-mid"></div>
   <div class="section-label">Trabajo puntual — no requiere agente permanente</div>
-  <div class="grid" id="grid-low"><div class="card visible" data-area="finanzas" data-type="puntual"><div class="card-inner">
-    <div class="stripe" style="background:#185FA5"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Incorporación automática de tipo de cambio Banxico a Epicor</div><span class="badge badge-puntual">Trabajo puntual</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-q0">Hoy el tipo de cambio se captura manualmente en Epicor, lo que genera riesgo de error y desfase entre la tasa oficial del Banco de México y la que está en el sistema. Esto afecta la valuación de inventarios, costeo de importaciones y cualquier transacción en dólares. La API de Banxico publica la tasa diaria y se puede conectar directamente a Epicor sin intervención humana.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#185FA5;border-color:#185FA555">Finanzas</span>
-        <span class="tag">Captura manual hoy · API Banxico disponible</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:70%;background:#185FA5"></div></div><span class="bar-val">70%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:20%;background:#B4B2A9"></div></div><span class="bar-val">20%</span></div>
-      </div>
-    </div>
-  </div></div><div class="card visible" data-area="compras" data-type="puntual"><div class="card-inner">
-    <div class="stripe" style="background:#0F6E56"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Limpieza y validación del catálogo de artículos</div><span class="badge badge-puntual">Trabajo puntual</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-q2">Hay más de 500 requisiciones activas en 3 plantas y el equipo está validando artículos contra una base de datos anterior. No existe un catálogo de precios limpio para materias primas y los indirectos no están estandarizados. Sin esto, no hay poder de negociación con proveedores.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#0F6E56;border-color:#0F6E5655">Compras / Supply</span>
-        <span class="tag">+500 requisiciones en 3 plantas · validación vs base anterior</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:60%;background:#888780"></div></div><span class="bar-val">60%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:35%;background:#B4B2A9"></div></div><span class="bar-val">35%</span></div>
-      </div>
-    </div>
-  </div></div><div class="card visible" data-area="rrhh" data-type="puntual"><div class="card-inner">
-    <div class="stripe" style="background:#534AB7"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Automatización de carta oferta y onboarding</div><span class="badge badge-puntual">Trabajo puntual</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-q4">Los contratos se generan en Word de forma manual y el paquete de onboarding se arma pieza por pieza. Son tareas de bajo volumen pero con tiempo desproporcionado al valor que generan.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#534AB7;border-color:#534AB755">RRHH</span>
-        <span class="tag">Contrato en Word · paquete de bienvenida manual</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:55%;background:#888780"></div></div><span class="bar-val">55%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:30%;background:#B4B2A9"></div></div><span class="bar-val">30%</span></div>
-      </div>
-    </div>
-  </div></div><div class="card visible" data-area="finanzas" data-type="puntual"><div class="card-inner">
-    <div class="stripe" style="background:#185FA5"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Incorporación automática de tipo de cambio Banxico a Epicor</div><span class="badge badge-puntual">Trabajo puntual</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-q0">Hoy el tipo de cambio se captura manualmente en Epicor, lo que genera riesgo de error y desfase entre la tasa oficial del Banco de México y la que está en el sistema. Esto afecta la valuación de inventarios, costeo de importaciones y cualquier transacción en dólares. La API de Banxico publica la tasa diaria y se puede conectar directamente a Epicor sin intervención humana.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#185FA5;border-color:#185FA555">Finanzas</span>
-        <span class="tag">Captura manual hoy · API Banxico disponible</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:70%;background:#185FA5"></div></div><span class="bar-val">70%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:20%;background:#B4B2A9"></div></div><span class="bar-val">20%</span></div>
-      </div>
-    </div>
-  </div></div><div class="card visible" data-area="compras" data-type="puntual"><div class="card-inner">
-    <div class="stripe" style="background:#0F6E56"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Limpieza y validación del catálogo de artículos</div><span class="badge badge-puntual">Trabajo puntual</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-q2">Hay más de 500 requisiciones activas en 3 plantas y el equipo está validando artículos contra una base de datos anterior. No existe un catálogo de precios limpio para materias primas y los indirectos no están estandarizados. Sin esto, no hay poder de negociación con proveedores.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#0F6E56;border-color:#0F6E5655">Compras / Supply</span>
-        <span class="tag">+500 requisiciones en 3 plantas · validación vs base anterior</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:60%;background:#888780"></div></div><span class="bar-val">60%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:35%;background:#B4B2A9"></div></div><span class="bar-val">35%</span></div>
-      </div>
-    </div>
-  </div></div><div class="card visible" data-area="rrhh" data-type="puntual"><div class="card-inner">
-    <div class="stripe" style="background:#534AB7"></div>
-    <div class="card-body">
-      <div class="card-top"><div class="card-title">Automatización de carta oferta y onboarding</div><span class="badge badge-puntual">Trabajo puntual</span></div>
-      <div class="problem-box">
-        <div class="problem-label">El problema</div>
-        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-q4">Los contratos se generan en Word de forma manual y el paquete de onboarding se arma pieza por pieza. Son tareas de bajo volumen pero con tiempo desproporcionado al valor que generan.</div>
-      </div>
-      <div class="tags">
-        <span class="tag" style="color:#534AB7;border-color:#534AB755">RRHH</span>
-        <span class="tag">Contrato en Word · paquete de bienvenida manual</span>
-      </div>
-      <div class="bars">
-        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:55%;background:#888780"></div></div><span class="bar-val">55%</span></div>
-        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:30%;background:#B4B2A9"></div></div><span class="bar-val">30%</span></div>
-      </div>
-    </div>
-  </div></div></div>
+  <div class="grid" id="grid-low"></div>
 </main>
 </div>
 
 <!-- PAGE 2: PROVEEDORES -->
-<div id="page-proveedores" class="page active">
+<div id="page-proveedores" class="page">
 <main style="max-width:1300px">
   <div style="margin-bottom:20px">
     <div style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:4px">Comparación de proveedores</div>
@@ -660,10 +151,8 @@ main{max-width:1200px;margin:0 auto;padding:24px 20px 64px}
         <col class="lbl">
         <col class="vendor"><col class="vendor"><col class="vendor">
       </colgroup>
-      <thead id="cmp-head"><tr><td style="padding: 0px 0px 12px;"></td><th class="vendor-hdr" style="background: var(--bg); border: 2px solid rgb(24, 95, 165); border-radius: 12px 12px 0px 0px; text-align: left; vertical-align: top;"><div class="vendor-name" contenteditable="true" spellcheck="false" data-save-key="vname-v1" style="color:var(--text)">RapidCanvas</div>
-      <div class="vendor-status" style="color:#185FA5">PROPUESTA RECIBIDA</div></th><th class="vendor-hdr" style="background: var(--bg); border: .5px solid var(--border); border-radius: 12px 12px 0px 0px; text-align: left; vertical-align: top; opacity: 0.65;"><div class="vendor-name" contenteditable="true" spellcheck="false" data-save-key="vname-v2" style="color:var(--text3)">Proveedor 2</div>
-      <div class="vendor-status" style="color:var(--text3)">POR EVALUAR</div></th><th class="vendor-hdr" style="background: var(--bg); border: .5px solid var(--border); border-radius: 12px 12px 0px 0px; text-align: left; vertical-align: top; opacity: 0.65;"><div class="vendor-name" contenteditable="true" spellcheck="false" data-save-key="vname-v3" style="color:var(--text3)">Proveedor 3</div>
-      <div class="vendor-status" style="color:var(--text3)">POR EVALUAR</div></th></tr></thead>
+      <thead id="cmp-head"></thead>
+      <tbody id="cmp-body"></tbody>
     </table>
   </div>
 
@@ -730,42 +219,6 @@ main{max-width:1200px;margin:0 auto;padding:24px 20px 64px}
       </div>
     </div>
   </div>
-
-
-  <!-- RC use cases -->
-  <div style="margin-top:28px">
-    <div style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:14px">Casos de uso identificados por RapidCanvas para IMMSA</div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px">
-      <div style="background:var(--bg);border:.5px solid var(--border);border-radius:var(--radius);padding:18px 20px">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-          <div style="width:28px;height:28px;border-radius:50%;background:#e6f1fb;color:#185FA5;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">1</div>
-          <div style="font-size:13px;font-weight:600;color:var(--text)">Optimizacion de inventario — Materias primas</div>
-        </div>
-        <div style="font-size:12.5px;color:var(--text2);line-height:1.55">IMMSA compra cobre y aluminio de 10+ proveedores con lead times de semanas a meses. Safety stock fijado por experiencia, no por datos. RapidCanvas propone demand sensing con IA y optimizacion de safety stock por SKU — potencial de reducir costos de carrying 20-30% y mejorar working capital.</div>
-      </div>
-      <div style="background:var(--bg);border:.5px solid var(--border);border-radius:var(--radius);padding:18px 20px">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-          <div style="width:28px;height:28px;border-radius:50%;background:#e6f1fb;color:#185FA5;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">2</div>
-          <div style="font-size:13px;font-weight:600;color:var(--text)">Automatizacion administrativa — RFQs, cotizaciones y back office</div>
-        </div>
-        <div style="font-size:12.5px;color:var(--text2);line-height:1.55">~200 empleados administrativos. Ingenieria procesa dibujos manualmente. RFQs, conciliacion de ordenes y gestion de proveedores son en su mayoria manuales. Referencia: redujeron headcount de back office 50% en cliente de real estate. Meta: estabilizar headcount administrativo mientras el negocio escala.</div>
-      </div>
-      <div style="background:var(--bg);border:.5px solid var(--border);border-radius:var(--radius);padding:18px 20px">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-          <div style="width:28px;height:28px;border-radius:50%;background:#e6f1fb;color:#185FA5;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">3</div>
-          <div style="font-size:13px;font-weight:600;color:var(--text)">Programacion de produccion entre plantas</div>
-        </div>
-        <div style="font-size:12.5px;color:var(--text2);line-height:1.55">Opera en CDMX, SLP, Monterrey y Burlington NC. La logica de scheduling vive en la cabeza de los planeadores. Proponen un asistente de scheduling con IA que optimiza asignacion de jobs por maquina y planta, reduce tiempos de cambio y reprograma ante ordenes urgentes.</div>
-      </div>
-      <div style="background:var(--bg);border:.5px solid var(--border);border-radius:var(--radius);padding:18px 20px">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-          <div style="width:28px;height:28px;border-radius:50%;background:#e6f1fb;color:#185FA5;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">4</div>
-          <div style="font-size:13px;font-weight:600;color:var(--text)">Estabilizacion de Epicor + integracion con Pulsar</div>
-        </div>
-        <div style="font-size:12.5px;color:var(--text2);line-height:1.55">Epicor arranco en febrero 2026. Pulsar corre en paralelo (tiempos de ciclo, uptime, conteos). Hoy operan independientemente. Proponen capa de datos unificada con un Second Brain: asistente que permite consultar produccion, scheduling y calidad en lenguaje natural, con briefings diarios proactivos.</div>
-      </div>
-    </div>
-  </div>
 </main>
 </div>
 
@@ -813,8 +266,39 @@ const cmpRows = [
   {key:'soporte',label:'Soporte incluido',v1:'10 horas/mes en producción'},
   {key:'garantia',label:'Garantía / salida',v1:'Periodo de salida en primeros 90 días'},
   {key:'entregables',label:'Entregables de diagnóstico',v1:'Reporte de factibilidad\nPropuesta de alto nivel\nRoadmap con fases y métricas\nPresentación ejecutiva'},
-  {key:'notas',label:'Notas / diferenciadores',v1:'¿El fee mensual arranca desde la firma o desde que el caso de uso entra en producción?'   
+  {key:'notas',label:'Notas / diferenciadores',v1:''},
 ];
+
+// ── LOCALSTORAGE ──────────────────────────────────────────────────────────────
+const STORE = 'beecker_v3';
+function getStore(){try{return JSON.parse(localStorage.getItem(STORE)||'{}')}catch(e){return{}}}
+function setStore(d){try{localStorage.setItem(STORE,JSON.stringify(d))}catch(e){}}
+
+function saveEdits(){
+  const d=getStore();
+  document.querySelectorAll('[data-save-key]').forEach(el=>{
+    d[el.dataset.saveKey]=el.innerHTML;
+  });
+  setStore(d);
+  const ind=document.getElementById('autosave-ind');
+  ind.classList.add('show');
+  clearTimeout(ind._t);
+  ind._t=setTimeout(()=>ind.classList.remove('show'),2000);
+}
+
+function loadEdits(){
+  const d=getStore();
+  document.querySelectorAll('[data-save-key]').forEach(el=>{
+    if(d[el.dataset.saveKey]!==undefined) el.innerHTML=d[el.dataset.saveKey];
+  });
+}
+
+document.addEventListener('input',e=>{
+  if(e.target.hasAttribute('data-save-key')){
+    clearTimeout(document._st);
+    document._st=setTimeout(saveEdits,600);
+  }
+});
 
 // ── RENDER INITIATIVES ────────────────────────────────────────────────────────
 function makeCard(d){
@@ -951,8 +435,8 @@ function saveHTML(){
   t._t=setTimeout(()=>t.classList.remove('show'),2500);
 }
 
+// ── RESTORE ON LOAD ───────────────────────────────────────────────────────────
+setTimeout(loadEdits,0);
 </script>
-
-
-
-</body></html>
+</body>
+</html>
