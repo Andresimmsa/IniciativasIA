@@ -3,7 +3,7 @@
 <html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Beecker — Iniciativas de IA</title>
+<title>Iniciativas de IA</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -87,7 +87,7 @@ main{max-width:1200px;margin:0 auto;padding:24px 20px 64px}
 
 <header>
   <div class="hdr-left">
-    <h1>Beecker — Iniciativas de Automatización con IA</h1>
+    <h1>Iniciativas de Automatización con IA</h1>
     <p>Haz clic en cualquier descripción para editarla · los cambios se guardan automáticamente</p>
   </div>
   <div style="display:flex;gap:8px">
@@ -561,7 +561,7 @@ const cmpRows = [
   {key:'garantia',label:'Garantía / salida',v1:'Periodo de salida en primeros 90 días'},
   {key:'entregables',label:'Entregables de diagnóstico',v1:'Reporte de factibilidad\nPropuesta de alto nivel\nRoadmap con fases y métricas\nPresentación ejecutiva'},
   {key:'notas',label:'Notas / diferenciadores',v1:''},
-  {key:'preguntas',label:'❓ Preguntas pendientes',v1:'¿El fee mensual arranca desde la firma o desde que el caso de uso entra en producción?\n¿Las fases de definición y desarrollo están incluidas en el fee mensual o tienen un costo separado?\n¿El MVP que garantizan en 90 días ya está en producción o es solo un prototipo validado?\n¿Qué pasa si ejercemos el opt-out a los 90 días — hay alguna penalidad o costo de salida?\n¿Si contratamos varios casos de uso al mismo tiempo, hay descuento por volumen?\n¿Las 10 horas/mes de soporte en producción son acumulables si no se usan?\n¿Los modelos y agentes que construyen son propiedad de IMMSA o de RapidCanvas?\n¿Los modelos entrenados con datos de IMMSA son propiedad de IMMSA al terminar el contrato?\n¿El código de los agentes es exportable o solo funciona dentro de la plataforma?\n¿Qué pasa con los datos de IMMSA si terminamos la relación — cómo se manejan?'},
+  {key:'preguntas',label:'❓ Preguntas pendientes',v1:'<br>•¿El fee mensual arranca desde la firma o desde que el caso de uso entra en producción?<br><br>•¿Las fases de definición y desarrollo están incluidas en el fee mensual o tienen un costo separado?\n¿El MVP que garantizan en 90 días ya está en producción o es solo un prototipo validado?\n¿Qué pasa si ejercemos el opt-out a los 90 días — hay alguna penalidad o costo de salida?\n¿Si contratamos varios casos de uso al mismo tiempo, hay descuento por volumen?\n¿Las 10 horas/mes de soporte en producción son acumulables si no se usan?\n¿Los modelos y agentes que construyen son propiedad de IMMSA o de RapidCanvas?\n¿Los modelos entrenados con datos de IMMSA son propiedad de IMMSA al terminar el contrato?\n¿El código de los agentes es exportable o solo funciona dentro de la plataforma?\n¿Qué pasa con los datos de IMMSA si terminamos la relación — cómo se manejan?'},
 ];
 
 // ── LOCALSTORAGE ──────────────────────────────────────────────────────────────
@@ -721,7 +721,7 @@ function saveHTML(){
   const blob=new Blob([html],{type:'text/html'});
   const a=document.createElement('a');
   a.href=URL.createObjectURL(blob);
-  a.download='beecker_iniciativas.html';
+  a.download='iniciativas_IA.html';
   a.click();
   URL.revokeObjectURL(a.href);
   const t=document.getElementById('toast');
