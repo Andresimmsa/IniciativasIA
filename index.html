@@ -391,17 +391,33 @@ function showTab(name){
 
 // ── DOWNLOAD ──────────────────────────────────────────────────────────────────
 function saveHTML(){
-  const html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
-  const blob=new Blob([html],{type:'text/html'});
-  const a=document.createElement('a');
-  a.href=URL.createObjectURL(blob);
-  a.download='beecker_iniciativas.html';
+ // 1. Clonar todo el documento
+  const clone = document.documentElement.cloneNode(true);
+
+  // 2. Copiar contenido editable manualmente
+  const originals = document.querySelectorAll('[contenteditable]');
+  const copies = clone.querySelectorAll('[contenteditable]');
+
+  originals.forEach((el, i) => {
+    copies[i].innerHTML = el.innerHTML;
+  });
+
+  // 3. Generar HTML final
+  const html = '<!DOCTYPE html>\n' + clone.outerHTML;
+
+  // 4. Descargar archivo
+  const blob = new Blob([html], {type:'text/html'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'beecker_iniciativas.html';
   a.click();
   URL.revokeObjectURL(a.href);
-  const t=document.getElementById('toast');
+
+  // 5. Toast visual
+  const t = document.getElementById('toast');
   t.classList.add('show');
   clearTimeout(t._t);
-  t._t=setTimeout(()=>t.classList.remove('show'),2500);
+  t._t = setTimeout(() => t.classList.remove('show'), 2500);
 }
 
 </script>
