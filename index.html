@@ -817,37 +817,6 @@ const cmpRows = [
   {key:'notas',label:'Notas / diferenciadores',v1:''},
 ];
 
-// ── LOCALSTORAGE ──────────────────────────────────────────────────────────────
-const STORE = 'beecker_v3';
-function getStore(){try{return JSON.parse(localStorage.getItem(STORE)||'{}')}catch(e){return{}}}
-function setStore(d){try{localStorage.setItem(STORE,JSON.stringify(d))}catch(e){}}
-
-function saveEdits(){
-  const d=getStore();
-  document.querySelectorAll('[data-save-key]').forEach(el=>{
-    d[el.dataset.saveKey]=el.innerHTML;
-  });
-  setStore(d);
-  const ind=document.getElementById('autosave-ind');
-  ind.classList.add('show');
-  clearTimeout(ind._t);
-  ind._t=setTimeout(()=>ind.classList.remove('show'),2000);
-}
-
-function loadEdits(){
-  const d=getStore();
-  document.querySelectorAll('[data-save-key]').forEach(el=>{
-    if(d[el.dataset.saveKey]!==undefined) el.innerHTML=d[el.dataset.saveKey];
-  });
-}
-
-document.addEventListener('input',e=>{
-  if(e.target.hasAttribute('data-save-key')){
-    clearTimeout(document._st);
-    document._st=setTimeout(saveEdits,600);
-  }
-});
-
 // ── RENDER INITIATIVES ────────────────────────────────────────────────────────
 function makeCard(d){
   const div=document.createElement('div');
