@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
+<!-- saved from url=(0066)file:///C:/Users/abeltran/Downloads/beecker_iniciativas%20(2).html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Beecker — Iniciativas de IA</title>
 <style>
@@ -88,57 +88,312 @@ main{max-width:1200px;margin:0 auto;padding:24px 20px 64px}
 <header>
   <div class="hdr-left">
     <h1>Beecker — Iniciativas de Automatización con IA</h1>
-    <p>Haz clic en cualquier descripción para editarla · descarga para guardar tus cambios</p>
+    <p>Haz clic en cualquier descripción para editarla · los cambios se guardan automáticamente</p>
   </div>
   <div style="display:flex;gap:8px">
-    <button class="btn" onclick="applyFilter('all')">Ver todas</button>
+    <button class="btn" onclick="applyFilter(&#39;all&#39;)">Ver todas</button>
     <button class="btn btn-blue" onclick="saveHTML()">Descargar con cambios</button>
   </div>
 </header>
 
 <div class="tab-bar">
-  <div class="tab active" onclick="showTab('iniciativas')">Iniciativas</div>
-  <div class="tab" onclick="showTab('proveedores')">Comparación de proveedores</div>
+  <div class="tab" onclick="showTab(&#39;iniciativas&#39;)">Iniciativas</div>
+  <div class="tab active" onclick="showTab(&#39;proveedores&#39;)">Comparación de proveedores</div>
 </div>
 
 <!-- PAGE 1: INICIATIVAS -->
-<div id="page-iniciativas" class="page active">
+<div id="page-iniciativas" class="page">
 <main>
   <div class="hint">Selecciona un área para filtrar las iniciativas</div>
   <div class="area-boxes" id="area-boxes">
     <div class="area-box active" data-filter="all" style="background:#f5f4f0;color:#444441">
-      <div class="area-box-icon">🗂</div><div class="area-box-name">Todas</div><div class="area-box-count" id="cnt-all"></div>
+      <div class="area-box-icon">🗂</div><div class="area-box-name">Todas</div><div class="area-box-count" id="cnt-all">15 iniciativas</div>
     </div>
     <div class="area-box" data-filter="finanzas" style="background:#e6f1fb;color:#185FA5">
-      <div class="area-box-icon">💰</div><div class="area-box-name">Finanzas</div><div class="area-box-count" id="cnt-finanzas"></div>
+      <div class="area-box-icon">💰</div><div class="area-box-name">Finanzas</div><div class="area-box-count" id="cnt-finanzas">2 iniciativas</div>
     </div>
     <div class="area-box" data-filter="ventas" style="background:#faece7;color:#993C1D">
-      <div class="area-box-icon">📈</div><div class="area-box-name">Ventas</div><div class="area-box-count" id="cnt-ventas"></div>
+      <div class="area-box-icon">📈</div><div class="area-box-name">Ventas</div><div class="area-box-count" id="cnt-ventas">3 iniciativas</div>
     </div>
     <div class="area-box" data-filter="rrhh" style="background:#eeedfe;color:#534AB7">
-      <div class="area-box-icon">👥</div><div class="area-box-name">RRHH</div><div class="area-box-count" id="cnt-rrhh"></div>
+      <div class="area-box-icon">👥</div><div class="area-box-name">RRHH</div><div class="area-box-count" id="cnt-rrhh">4 iniciativas</div>
     </div>
     <div class="area-box" data-filter="compras" style="background:#e1f5ee;color:#0F6E56">
-      <div class="area-box-icon">📦</div><div class="area-box-name">Compras / Supply</div><div class="area-box-count" id="cnt-compras"></div>
+      <div class="area-box-icon">📦</div><div class="area-box-name">Compras / Supply</div><div class="area-box-count" id="cnt-compras">3 iniciativas</div>
     </div>
     <div class="area-box" data-filter="pcp" style="background:#faeeda;color:#854F0B">
-      <div class="area-box-icon">⚙️</div><div class="area-box-name">Producción / PCP</div><div class="area-box-count" id="cnt-pcp"></div>
+      <div class="area-box-icon">⚙️</div><div class="area-box-name">Producción / PCP</div><div class="area-box-count" id="cnt-pcp">2 iniciativas</div>
     </div>
     <div class="area-box" data-filter="calidad" style="background:#fbeaf0;color:#993556">
-      <div class="area-box-icon">✅</div><div class="area-box-name">Calidad</div><div class="area-box-count" id="cnt-calidad"></div>
+      <div class="area-box-icon">✅</div><div class="area-box-name">Calidad</div><div class="area-box-count" id="cnt-calidad">1 iniciativa</div>
     </div>
   </div>
   <div class="section-label">⭐ Prioridad alta — quick wins</div>
-  <div class="grid" id="grid-high"></div>
+  <div class="grid" id="grid-high"><div class="card visible" data-area="rrhh" data-type="continuo"><div class="card-inner">
+    <div class="stripe" style="background:#534AB7"></div>
+    <div class="card-body">
+      <div class="card-top"><div class="card-title">Screening y agendado de candidatos</div><span class="badge badge-continuo">Agente continuo</span></div>
+      <div class="problem-box">
+        <div class="problem-label">El problema</div>
+        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-c1">Hoy RRHH revisa manualmente 300–400 CVs al mes, pide documentos uno a uno y agenda entrevistas por correo. El proceso tarda días antes de siquiera hablar con un candidato, y el talento elige la oferta que primero llega.</div>
+      </div>
+      <div class="tags">
+        <span class="tag" style="color:#534AB7;border-color:#534AB755">RRHH</span>
+        <span class="tag">300–400 candidatos/mes · proceso 100% manual</span>
+      </div>
+      <div class="bars">
+        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:90%;background:#1D9E75"></div></div><span class="bar-val">90%</span></div>
+        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:30%;background:#B4B2A9"></div></div><span class="bar-val">30%</span></div>
+      </div>
+    </div>
+  </div></div><div class="card visible" data-area="compras" data-type="continuo"><div class="card-inner">
+    <div class="stripe" style="background:#0F6E56"></div>
+    <div class="card-body">
+      <div class="card-top"><div class="card-title">Automatización de listas de embarque</div><span class="badge badge-continuo">Agente continuo</span></div>
+      <div class="problem-box">
+        <div class="problem-label">El problema</div>
+        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-c2">8 personas dedican 1h 30min cada una diariamente a construir listas de embarque en Excel. Es su función principal pero es trabajo de copiado y armado, no de planeación. Con 250 listas semanales, el equipo no da abasto y hay errores de coordinación entre planta y comercial.</div>
+      </div>
+      <div class="tags">
+        <span class="tag" style="color:#0F6E56;border-color:#0F6E5655">Compras / Supply</span>
+        <span class="tag">250 listas/semana · 8 personas × 1h 30min</span>
+      </div>
+      <div class="bars">
+        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:85%;background:#1D9E75"></div></div><span class="bar-val">85%</span></div>
+        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:40%;background:#B4B2A9"></div></div><span class="bar-val">40%</span></div>
+      </div>
+    </div>
+  </div></div><div class="card visible" data-area="finanzas" data-type="continuo"><div class="card-inner">
+    <div class="stripe" style="background:#185FA5"></div>
+    <div class="card-body">
+      <div class="card-top"><div class="card-title">Validación documental en Procure to Pay</div><span class="badge badge-continuo">Agente continuo</span></div>
+      <div class="problem-box">
+        <div class="problem-label">El problema</div>
+        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-c3">Cada factura, orden de compra y proveedor nuevo requiere validar documentos (REPSE, CFI y otros) de forma manual. Además, hoy no existe visibilidad del histórico de precios por proveedor, lo que impide comparar si el precio de la factura entrante está alineado con lo que se ha pagado antes. Con 1,600 facturas y 1,500–2,000 órdenes al mes, el equipo no tiene forma de detectar desviaciones de precio a tiempo.</div>
+      </div>
+      <div class="tags">
+        <span class="tag" style="color:#185FA5;border-color:#185FA555">Finanzas</span>
+        <span class="tag">1,500–2,000 OC/mes · 1,600 facturas · 40 provs. nuevos</span>
+      </div>
+      <div class="bars">
+        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:88%;background:#1D9E75"></div></div><span class="bar-val">88%</span></div>
+        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:45%;background:#B4B2A9"></div></div><span class="bar-val">45%</span></div>
+      </div>
+    </div>
+  </div></div><div class="card visible" data-area="ventas" data-type="continuo"><div class="card-inner">
+    <div class="stripe" style="background:#993C1D"></div>
+    <div class="card-body">
+      <div class="card-top"><div class="card-title">Validación de precios al recibir PO</div><span class="badge badge-continuo">Agente continuo</span></div>
+      <div class="problem-box">
+        <div class="problem-label">El problema</div>
+        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-c4">Se le envía una cotización al cliente con un precio determinado, pero si cambia el mes y la lista de precios se actualiza, el precio original puede quedar desactualizado. Cuando llega la orden de compra, alguien tiene que revisar manualmente que cada precio del PO coincida con la lista vigente. Si no se detecta la discrepancia a tiempo, hay que regresar con el cliente a actualizar la cotización, generando reproceso comercial y retrasos en producción.</div>
+      </div>
+      <div class="tags">
+        <span class="tag" style="color:#993C1D;border-color:#993C1D55">Ventas</span>
+        <span class="tag">Lista de precios en nube · revisión manual actual</span>
+      </div>
+      <div class="bars">
+        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:80%;background:#1D9E75"></div></div><span class="bar-val">80%</span></div>
+        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:20%;background:#B4B2A9"></div></div><span class="bar-val">20%</span></div>
+      </div>
+    </div>
+  </div></div></div>
   <div class="section-label">Prioridad media — alto valor estructural</div>
-  <div class="grid" id="grid-mid"></div>
+  <div class="grid" id="grid-mid"><div class="card visible" data-area="compras" data-type="continuo"><div class="card-inner">
+    <div class="stripe" style="background:#0F6E56"></div>
+    <div class="card-body">
+      <div class="card-top"><div class="card-title">Dashboard de recompras y control min/max</div><span class="badge badge-continuo">Agente continuo</span></div>
+      <div class="problem-box">
+        <div class="problem-label">El problema</div>
+        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-m2">Una sola persona gestiona todas las recompras y revisa niveles de inventario, pero solo puede hacerlo una vez a la semana porque no da abasto. Esto provoca que se llegue a mínimos sin activar reposición a tiempo. La meta es bajar inventario de MP de 60 a 30–45 días.</div>
+      </div>
+      <div class="tags">
+        <span class="tag" style="color:#0F6E56;border-color:#0F6E5655">Compras / Supply</span>
+        <span class="tag">1 persona es el cuello de botella · actualiza 1 vez/semana</span>
+      </div>
+      <div class="bars">
+        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:82%;background:#1D9E75"></div></div><span class="bar-val">82%</span></div>
+        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:50%;background:#B4B2A9"></div></div><span class="bar-val">50%</span></div>
+      </div>
+    </div>
+  </div></div><div class="card visible" data-area="rrhh" data-type="continuo"><div class="card-inner">
+    <div class="stripe" style="background:#534AB7"></div>
+    <div class="card-body">
+      <div class="card-top"><div class="card-title">Gestión de incidencias y nómina</div><span class="badge badge-continuo">Agente continuo</span></div>
+      <div class="problem-box">
+        <div class="problem-label">El problema</div>
+        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-m4">Cada quincena, el supervisor compara asistencias contra Excel y el resultado se copia y pega al sistema de nómina (Worky). Es un proceso de alta fricción, propenso a errores, y consume tiempo de supervisores que deberían estar en piso.</div>
+      </div>
+      <div class="tags">
+        <span class="tag" style="color:#534AB7;border-color:#534AB755">RRHH</span>
+        <span class="tag">Ciclo quincenal · supervisor vs excel · copia/pega manual</span>
+      </div>
+      <div class="bars">
+        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:70%;background:#185FA5"></div></div><span class="bar-val">70%</span></div>
+        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:55%;background:#B4B2A9"></div></div><span class="bar-val">55%</span></div>
+      </div>
+    </div>
+  </div></div><div class="card visible" data-area="pcp" data-type="continuo"><div class="card-inner">
+    <div class="stripe" style="background:#854F0B"></div>
+    <div class="card-body">
+      <div class="card-top"><div class="card-title">Consolidación de reportes Epicor + simulaciones de capacidad</div><span class="badge badge-continuo">Agente continuo</span></div>
+      <div class="problem-box">
+        <div class="problem-label">El problema</div>
+        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-m5">Jacinto consolida manualmente 8 reportes de Epicor solo para tener la data lista antes de poder analizar algo. El verdadero valor está después: hacer simulaciones de capacidad y evaluar desviaciones entre tiempos estándar y tiempos reales. Automatizar la extracción y consolidación de datos libera ese tiempo para que el equipo se enfoque en el análisis, no en el armado del insumo.</div>
+      </div>
+      <div class="tags">
+        <span class="tag" style="color:#854F0B;border-color:#854F0B55">Producción / PCP</span>
+        <span class="tag">8 reportes manuales · cálculo de fases · alertas preventivas</span>
+      </div>
+      <div class="bars">
+        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:72%;background:#185FA5"></div></div><span class="bar-val">72%</span></div>
+        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:60%;background:#B4B2A9"></div></div><span class="bar-val">60%</span></div>
+      </div>
+    </div>
+  </div></div><div class="card visible" data-area="ventas" data-type="continuo"><div class="card-inner">
+    <div class="stripe" style="background:#993C1D"></div>
+    <div class="card-body">
+      <div class="card-top"><div class="card-title">Actualización automática de fechas de entrega y producción en Epicor</div><span class="badge badge-continuo">Agente continuo</span></div>
+      <div class="problem-box">
+        <div class="problem-label">El problema</div>
+        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-m7">Cuando ventas o producción necesitan cambiar la fecha de entrega o de producción de un pedido, hoy hay que actualizar manualmente cada etapa del proceso en Epicor uno por uno. Esto toma entre 2 y 3 horas por ajuste. En el sistema anterior (Libra) la confirmación de fecha de entrega era automática al revisar el open order — en Epicor ese flujo no está configurado. El resultado es que las fechas en el sistema no reflejan la realidad en tiempo real, generando descoordinación entre ventas, producción y el cliente.</div>
+      </div>
+      <div class="tags">
+        <span class="tag" style="color:#993C1D;border-color:#993C1D55">Ventas</span>
+        <span class="tag">Actualización manual · 2–3 horas por cambio de fecha</span>
+      </div>
+      <div class="bars">
+        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:76%;background:#185FA5"></div></div><span class="bar-val">76%</span></div>
+        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:50%;background:#B4B2A9"></div></div><span class="bar-val">50%</span></div>
+      </div>
+    </div>
+  </div></div><div class="card visible" data-area="ventas" data-type="continuo"><div class="card-inner">
+    <div class="stripe" style="background:#993C1D"></div>
+    <div class="card-body">
+      <div class="card-top"><div class="card-title">Precalificación de leads entrantes (inbound)</div><span class="badge badge-continuo">Agente continuo</span></div>
+      <div class="problem-box">
+        <div class="problem-label">El problema</div>
+        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-m6">Casi el 100% del negocio es inbound pero no hay filtro inicial: cualquier correo o llamada entra como lead y el equipo comercial termina atendiendo oportunidades que no califican. En un periodo de 3 meses se generan hasta 200 cotizaciones (incluyendo clientes actuales), de las cuales 60–70 son nuevas por mes para unas 700 piezas. Sin un prefiltro que califique antes de cotizar, el equipo invierte tiempo en solicitudes que no van a cerrar o que no son rentables.</div>
+      </div>
+      <div class="tags">
+        <span class="tag" style="color:#993C1D;border-color:#993C1D55">Ventas</span>
+        <span class="tag">Casi 100% inbound · sin filtro estructurado hoy</span>
+      </div>
+      <div class="bars">
+        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:68%;background:#888780"></div></div><span class="bar-val">68%</span></div>
+        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:40%;background:#B4B2A9"></div></div><span class="bar-val">40%</span></div>
+      </div>
+    </div>
+  </div></div><div class="card visible" data-area="calidad" data-type="continuo"><div class="card-inner">
+    <div class="stripe" style="background:#993556"></div>
+    <div class="card-body">
+      <div class="card-top"><div class="card-title">Análisis histórico de rechazos (2023–2025)</div><span class="badge badge-continuo">Agente continuo</span></div>
+      <div class="problem-box">
+        <div class="problem-label">El problema</div>
+        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-p1">Calidad tiene 5,000 casos de rechazo en 3 fuentes distintas, con 10 campos por registro, sin consolidar ni analizar. Fernando necesita identificar causas raíz y patrones preventivos pero la data está dispersa y en formatos diferentes.</div>
+      </div>
+      <div class="tags">
+        <span class="tag" style="color:#993556;border-color:#99355655">Calidad</span>
+        <span class="tag">5,000 casos · 3 fuentes · 10 campos por caso</span>
+      </div>
+      <div class="bars">
+        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:65%;background:#888780"></div></div><span class="bar-val">65%</span></div>
+        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:30%;background:#B4B2A9"></div></div><span class="bar-val">30%</span></div>
+      </div>
+    </div>
+  </div></div><div class="card visible" data-area="pcp" data-type="continuo"><div class="card-inner">
+    <div class="stripe" style="background:#854F0B"></div>
+    <div class="card-body">
+      <div class="card-top"><div class="card-title">Visibilidad de inventario en planta en tiempo real</div><span class="badge badge-continuo">Agente continuo</span></div>
+      <div class="problem-box">
+        <div class="problem-label">El problema</div>
+        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-p3">Eduardo (planta ATZ) no tiene visibilidad en Epicor de cuánto material hay en cada etapa del proceso productivo. Se hacen auditorías manuales para verificar que lo del sistema coincide con el piso. Sin esta visibilidad continua no se puede automatizar la planeación de producción.</div>
+      </div>
+      <div class="tags">
+        <span class="tag" style="color:#854F0B;border-color:#854F0B55">Producción / PCP</span>
+        <span class="tag">Sin visibilidad real en Epicor · auditorías manuales</span>
+      </div>
+      <div class="bars">
+        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:55%;background:#888780"></div></div><span class="bar-val">55%</span></div>
+        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:25%;background:#B4B2A9"></div></div><span class="bar-val">25%</span></div>
+      </div>
+    </div>
+  </div></div><div class="card visible" data-area="rrhh" data-type="continuo"><div class="card-inner">
+    <div class="stripe" style="background:#534AB7"></div>
+    <div class="card-body">
+      <div class="card-top"><div class="card-title">Verificación de vencimiento de contratos temporales</div><span class="badge badge-continuo">Agente continuo</span></div>
+      <div class="problem-box">
+        <div class="problem-label">El problema</div>
+        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-p5">Hoy alguien tiene que revisar manualmente qué empleados están próximos a cumplir 3 meses para decidir si pasan a contrato indefinido o se da de baja. Son ~15 minutos diarios pero el riesgo es alto: si se pasa la fecha sin actuar hay implicaciones legales. El agente monitora las fechas y manda automáticamente un aviso al manager y a RH con tiempo suficiente para tomar la decisión y gestionar el trámite.</div>
+      </div>
+      <div class="tags">
+        <span class="tag" style="color:#534AB7;border-color:#534AB755">RRHH</span>
+        <span class="tag">Revisión manual diaria · riesgo legal si se vence plazo</span>
+      </div>
+      <div class="bars">
+        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:72%;background:#185FA5"></div></div><span class="bar-val">72%</span></div>
+        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:20%;background:#B4B2A9"></div></div><span class="bar-val">20%</span></div>
+      </div>
+    </div>
+  </div></div></div>
   <div class="section-label">Trabajo puntual — no requiere agente permanente</div>
-  <div class="grid" id="grid-low"></div>
+  <div class="grid" id="grid-low"><div class="card visible" data-area="finanzas" data-type="puntual"><div class="card-inner">
+    <div class="stripe" style="background:#185FA5"></div>
+    <div class="card-body">
+      <div class="card-top"><div class="card-title">Incorporación automática de tipo de cambio Banxico a Epicor</div><span class="badge badge-puntual">Trabajo puntual</span></div>
+      <div class="problem-box">
+        <div class="problem-label">El problema</div>
+        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-q0">Hoy el tipo de cambio se captura manualmente en Epicor, lo que genera riesgo de error y desfase entre la tasa oficial del Banco de México y la que está en el sistema. Esto afecta la valuación de inventarios, costeo de importaciones y cualquier transacción en dólares. La API de Banxico publica la tasa diaria y se puede conectar directamente a Epicor sin intervención humana.</div>
+      </div>
+      <div class="tags">
+        <span class="tag" style="color:#185FA5;border-color:#185FA555">Finanzas</span>
+        <span class="tag">Captura manual hoy · API Banxico disponible</span>
+      </div>
+      <div class="bars">
+        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:70%;background:#185FA5"></div></div><span class="bar-val">70%</span></div>
+        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:20%;background:#B4B2A9"></div></div><span class="bar-val">20%</span></div>
+      </div>
+    </div>
+  </div></div><div class="card visible" data-area="compras" data-type="puntual"><div class="card-inner">
+    <div class="stripe" style="background:#0F6E56"></div>
+    <div class="card-body">
+      <div class="card-top"><div class="card-title">Limpieza y validación del catálogo de artículos</div><span class="badge badge-puntual">Trabajo puntual</span></div>
+      <div class="problem-box">
+        <div class="problem-label">El problema</div>
+        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-q2">Hay más de 500 requisiciones activas en 3 plantas y el equipo está validando artículos contra una base de datos anterior. No existe un catálogo de precios limpio para materias primas y los indirectos no están estandarizados. Sin esto, no hay poder de negociación con proveedores.</div>
+      </div>
+      <div class="tags">
+        <span class="tag" style="color:#0F6E56;border-color:#0F6E5655">Compras / Supply</span>
+        <span class="tag">+500 requisiciones en 3 plantas · validación vs base anterior</span>
+      </div>
+      <div class="bars">
+        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:60%;background:#888780"></div></div><span class="bar-val">60%</span></div>
+        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:35%;background:#B4B2A9"></div></div><span class="bar-val">35%</span></div>
+      </div>
+    </div>
+  </div></div><div class="card visible" data-area="rrhh" data-type="puntual"><div class="card-inner">
+    <div class="stripe" style="background:#534AB7"></div>
+    <div class="card-body">
+      <div class="card-top"><div class="card-title">Automatización de carta oferta y onboarding</div><span class="badge badge-puntual">Trabajo puntual</span></div>
+      <div class="problem-box">
+        <div class="problem-label">El problema</div>
+        <div class="problem-text" contenteditable="true" spellcheck="false" data-save-key="prob-q4">Los contratos se generan en Word de forma manual y el paquete de onboarding se arma pieza por pieza. Son tareas de bajo volumen pero con tiempo desproporcionado al valor que generan.</div>
+      </div>
+      <div class="tags">
+        <span class="tag" style="color:#534AB7;border-color:#534AB755">RRHH</span>
+        <span class="tag">Contrato en Word · paquete de bienvenida manual</span>
+      </div>
+      <div class="bars">
+        <div class="bar-row"><span class="bar-label">Impacto</span><div class="bar-track"><div class="bar-fill" style="width:55%;background:#888780"></div></div><span class="bar-val">55%</span></div>
+        <div class="bar-row"><span class="bar-label">Esfuerzo</span><div class="bar-track"><div class="bar-fill" style="width:30%;background:#B4B2A9"></div></div><span class="bar-val">30%</span></div>
+      </div>
+    </div>
+  </div></div></div>
 </main>
 </div>
 
 <!-- PAGE 2: PROVEEDORES -->
-<div id="page-proveedores" class="page">
+<div id="page-proveedores" class="page active">
 <main style="max-width:1300px">
   <div style="margin-bottom:20px">
     <div style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:4px">Comparación de proveedores</div>
@@ -151,8 +406,11 @@ main{max-width:1200px;margin:0 auto;padding:24px 20px 64px}
         <col class="lbl">
         <col class="vendor"><col class="vendor"><col class="vendor">
       </colgroup>
-      <thead id="cmp-head"></thead>
-      <tbody id="cmp-body"></tbody>
+      <thead id="cmp-head"><tr><td style="padding: 0px 0px 12px;"></td><th class="vendor-hdr" style="background: var(--bg); border: 2px solid rgb(24, 95, 165); border-radius: 12px 12px 0px 0px; text-align: left; vertical-align: top;"><div class="vendor-name" contenteditable="true" spellcheck="false" data-save-key="vname-v1" style="color:var(--text)">RapidCanvas</div>
+      <div class="vendor-status" style="color:#185FA5">PROPUESTA RECIBIDA</div></th><th class="vendor-hdr" style="background: var(--bg); border: .5px solid var(--border); border-radius: 12px 12px 0px 0px; text-align: left; vertical-align: top; opacity: 0.65;"><div class="vendor-name" contenteditable="true" spellcheck="false" data-save-key="vname-v2" style="color:var(--text3)">Proveedor 2</div>
+      <div class="vendor-status" style="color:var(--text3)">POR EVALUAR</div></th><th class="vendor-hdr" style="background: var(--bg); border: .5px solid var(--border); border-radius: 12px 12px 0px 0px; text-align: left; vertical-align: top; opacity: 0.65;"><div class="vendor-name" contenteditable="true" spellcheck="false" data-save-key="vname-v3" style="color:var(--text3)">Proveedor 3</div>
+      <div class="vendor-status" style="color:var(--text3)">POR EVALUAR</div></th></tr></thead>
+      <tbody id="cmp-body"><tr><td class="cmp-lbl">Precio mensual por caso de uso</td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-precio-v1" data-ph="Agregar..." style="background: var(--bg2); border-right: 2px solid rgb(24, 95, 165); border-left: 2px solid rgb(24, 95, 165); border-image: initial; border-top: none; border-bottom: none;">$6,000–$8,000 USD/mes</td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-precio-v2" data-ph="Agregar..." style="background: var(--bg2); border-right-color: ; border-right-style: ; border-right-width: ; border-left-color: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-top: none; border-bottom: none; opacity: 0.65;"></td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-precio-v3" data-ph="Agregar..." style="background: var(--bg2); border-right-color: ; border-right-style: ; border-right-width: ; border-left-color: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-top: none; border-bottom: none; opacity: 0.65;"></td></tr><tr><td class="cmp-lbl">Costo de entrada / diagnóstico</td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-entrada-v1" data-ph="Agregar..." style="background: var(--bg); border-right: 2px solid rgb(24, 95, 165); border-left: 2px solid rgb(24, 95, 165); border-image: initial; border-top: none; border-bottom: none;">$15,000 USD (taller 2 días)<br>Se descuenta del primer caso de uso</td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-entrada-v2" data-ph="Agregar..." style="background: var(--bg); border-right-color: ; border-right-style: ; border-right-width: ; border-left-color: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-top: none; border-bottom: none; opacity: 0.65;"></td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-entrada-v3" data-ph="Agregar..." style="background: var(--bg); border-right-color: ; border-right-style: ; border-right-width: ; border-left-color: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-top: none; border-bottom: none; opacity: 0.65;"></td></tr><tr><td class="cmp-lbl">Modelo de contrato</td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-contrato-v1" data-ph="Agregar..." style="background: var(--bg2); border-right: 2px solid rgb(24, 95, 165); border-left: 2px solid rgb(24, 95, 165); border-image: initial; border-top: none; border-bottom: none;">Mensual, anual o multianual<br>(mejor precio a mayor plazo)</td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-contrato-v2" data-ph="Agregar..." style="background: var(--bg2); border-right-color: ; border-right-style: ; border-right-width: ; border-left-color: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-top: none; border-bottom: none; opacity: 0.65;"></td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-contrato-v3" data-ph="Agregar..." style="background: var(--bg2); border-right-color: ; border-right-style: ; border-right-width: ; border-left-color: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-top: none; border-bottom: none; opacity: 0.65;"></td></tr><tr><td class="cmp-lbl">Costos ocultos</td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-ocultos-v1" data-ph="Agregar..." style="background: var(--bg); border-right: 2px solid rgb(24, 95, 165); border-left: 2px solid rgb(24, 95, 165); border-image: initial; border-top: none; border-bottom: none;">Sin cargos por usuario,<br>datos ni configuración</td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-ocultos-v2" data-ph="Agregar..." style="background: var(--bg); border-right-color: ; border-right-style: ; border-right-width: ; border-left-color: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-top: none; border-bottom: none; opacity: 0.65;"></td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-ocultos-v3" data-ph="Agregar..." style="background: var(--bg); border-right-color: ; border-right-style: ; border-right-width: ; border-left-color: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-top: none; border-bottom: none; opacity: 0.65;"></td></tr><tr><td class="cmp-lbl">Tiempo al kickoff</td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-kickoff-v1" data-ph="Agregar..." style="background: var(--bg2); border-right: 2px solid rgb(24, 95, 165); border-left: 2px solid rgb(24, 95, 165); border-image: initial; border-top: none; border-bottom: none;">6 semanas desde NDA</td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-kickoff-v2" data-ph="Agregar..." style="background: var(--bg2); border-right-color: ; border-right-style: ; border-right-width: ; border-left-color: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-top: none; border-bottom: none; opacity: 0.65;"></td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-kickoff-v3" data-ph="Agregar..." style="background: var(--bg2); border-right-color: ; border-right-style: ; border-right-width: ; border-left-color: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-top: none; border-bottom: none; opacity: 0.65;"></td></tr><tr><td class="cmp-lbl">Fases de implementación</td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-fases-v1" data-ph="Agregar..." style="background: var(--bg); border-right: 2px solid rgb(24, 95, 165); border-left: 2px solid rgb(24, 95, 165); border-image: initial; border-top: none; border-bottom: none;">Definición → Desarrollo → Test → Producción</td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-fases-v2" data-ph="Agregar..." style="background: var(--bg); border-right-color: ; border-right-style: ; border-right-width: ; border-left-color: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-top: none; border-bottom: none; opacity: 0.65;"></td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-fases-v3" data-ph="Agregar..." style="background: var(--bg); border-right-color: ; border-right-style: ; border-right-width: ; border-left-color: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-top: none; border-bottom: none; opacity: 0.65;"></td></tr><tr><td class="cmp-lbl">Tiempo de implementación</td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-tiempo-v1" data-ph="Agregar..." style="background: var(--bg2); border-right: 2px solid rgb(24, 95, 165); border-left: 2px solid rgb(24, 95, 165); border-image: initial; border-top: none; border-bottom: none;">8–20 semanas (varía por fase)</td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-tiempo-v2" data-ph="Agregar..." style="background: var(--bg2); border-right-color: ; border-right-style: ; border-right-width: ; border-left-color: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-top: none; border-bottom: none; opacity: 0.65;"></td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-tiempo-v3" data-ph="Agregar..." style="background: var(--bg2); border-right-color: ; border-right-style: ; border-right-width: ; border-left-color: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-top: none; border-bottom: none; opacity: 0.65;"></td></tr><tr><td class="cmp-lbl">Soporte incluido</td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-soporte-v1" data-ph="Agregar..." style="background: var(--bg); border-right: 2px solid rgb(24, 95, 165); border-left: 2px solid rgb(24, 95, 165); border-image: initial; border-top: none; border-bottom: none;">10 horas/mes en producción</td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-soporte-v2" data-ph="Agregar..." style="background: var(--bg); border-right-color: ; border-right-style: ; border-right-width: ; border-left-color: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-top: none; border-bottom: none; opacity: 0.65;"></td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-soporte-v3" data-ph="Agregar..." style="background: var(--bg); border-right-color: ; border-right-style: ; border-right-width: ; border-left-color: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-top: none; border-bottom: none; opacity: 0.65;"></td></tr><tr><td class="cmp-lbl">Garantía / salida</td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-garantia-v1" data-ph="Agregar..." style="background: var(--bg2); border-right: 2px solid rgb(24, 95, 165); border-left: 2px solid rgb(24, 95, 165); border-image: initial; border-top: none; border-bottom: none;">Periodo de salida en primeros 90 días</td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-garantia-v2" data-ph="Agregar..." style="background: var(--bg2); border-right-color: ; border-right-style: ; border-right-width: ; border-left-color: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-top: none; border-bottom: none; opacity: 0.65;"></td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-garantia-v3" data-ph="Agregar..." style="background: var(--bg2); border-right-color: ; border-right-style: ; border-right-width: ; border-left-color: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-top: none; border-bottom: none; opacity: 0.65;"></td></tr><tr><td class="cmp-lbl">Entregables de diagnóstico</td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-entregables-v1" data-ph="Agregar..." style="background: var(--bg); border-right: 2px solid rgb(24, 95, 165); border-left: 2px solid rgb(24, 95, 165); border-image: initial; border-top: none; border-bottom: none;">Reporte de factibilidad<br>Propuesta de alto nivel<br>Roadmap con fases y métricas<br>Presentación ejecutiva</td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-entregables-v2" data-ph="Agregar..." style="background: var(--bg); border-right-color: ; border-right-style: ; border-right-width: ; border-left-color: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-top: none; border-bottom: none; opacity: 0.65;"></td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-entregables-v3" data-ph="Agregar..." style="background: var(--bg); border-right-color: ; border-right-style: ; border-right-width: ; border-left-color: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-top: none; border-bottom: none; opacity: 0.65;"></td></tr><tr><td class="cmp-lbl">Notas / diferenciadores</td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-notas-v1" data-ph="Agregar..." style="background: var(--bg2); border-right: 2px solid rgb(24, 95, 165); border-left: 2px solid rgb(24, 95, 165); border-image: initial; border-top: none; border-bottom: none;"></td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-notas-v2" data-ph="Agregar..." style="background: var(--bg2); border-right-color: ; border-right-style: ; border-right-width: ; border-left-color: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-top: none; border-bottom: .5px solid var(--border); border-radius: 0px 0px 12px 12px; opacity: 0.65;"></td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-notas-v3" data-ph="Agregar..." style="background: var(--bg2); border-right-color: ; border-right-style: ; border-right-width: ; border-left-color: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-top: none; border-bottom: .5px solid var(--border); border-radius: 0px 0px 12px 12px; opacity: 0.65;"></td></tr><tr><td class="cmp-lbl" style="color:#854F0B;font-weight:700">❓ Preguntas pendientes</td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-preguntas-v1" data-ph="Agregar respuesta..." style="background:#faeeda; border-right: 2px solid rgb(24, 95, 165); border-left: 2px solid rgb(24, 95, 165); border-image: initial; border-top: none; border-bottom: 2px solid rgb(24, 95, 165); border-radius: 0px 0px 12px 12px; font-size:12px; line-height:1.7; color:#5f5e5a">¿El fee mensual arranca desde la firma o desde que el caso de uso entra en producción?<br>¿Las fases de definición y desarrollo están incluidas en el fee mensual o tienen un costo separado?<br>¿El MVP que garantizan en 90 días ya está en producción o es solo un prototipo validado?<br>¿Qué pasa si ejercemos el opt-out a los 90 días — hay alguna penalidad o costo de salida?<br>¿Si contratamos varios casos de uso al mismo tiempo, hay descuento por volumen?<br>¿Las 10 horas/mes de soporte en producción son acumulables si no se usan?<br>¿Los modelos y agentes que construyen son propiedad de IMMSA o de RapidCanvas?<br>¿Los modelos entrenados con datos de IMMSA son propiedad de IMMSA al terminar el contrato?<br>¿El código de los agentes es exportable o solo funciona dentro de la plataforma?<br>¿Qué pasa con los datos de IMMSA si terminamos la relación — cómo se manejan?</td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-preguntas-v2" data-ph="Agregar respuesta..." style="background:#faeeda; border-top: none; border-bottom: .5px solid var(--border); border-radius: 0px 0px 12px 12px; opacity: 0.65;"></td><td class="cmp-cell" contenteditable="true" spellcheck="false" data-save-key="cmp-preguntas-v3" data-ph="Agregar respuesta..." style="background:#faeeda; border-top: none; border-bottom: .5px solid var(--border); border-radius: 0px 0px 12px 12px; opacity: 0.65;"></td></tr></tbody>
     </table>
   </div>
 
@@ -292,7 +550,7 @@ const vendors = [
 ];
 
 const cmpRows = [
-  {key:'precio',label:'Precio mensual por caso de uso',v1:'$6,000–$8,000 USD/mes',v2:'$,4000 USD/mes'},
+  {key:'precio',label:'Precio mensual por caso de uso',v1:'$6,000–$8,000 USD/mes'},
   {key:'entrada',label:'Costo de entrada / diagnóstico',v1:'$15,000 USD (taller 2 días)\nSe descuenta del primer caso de uso'},
   {key:'contrato',label:'Modelo de contrato',v1:'Mensual, anual o multianual\n(mejor precio a mayor plazo)'},
   {key:'ocultos',label:'Costos ocultos',v1:'Sin cargos por usuario,\ndatos ni configuración'},
@@ -302,20 +560,40 @@ const cmpRows = [
   {key:'soporte',label:'Soporte incluido',v1:'10 horas/mes en producción'},
   {key:'garantia',label:'Garantía / salida',v1:'Periodo de salida en primeros 90 días'},
   {key:'entregables',label:'Entregables de diagnóstico',v1:'Reporte de factibilidad\nPropuesta de alto nivel\nRoadmap con fases y métricas\nPresentación ejecutiva'},
-  {key:'notas',label:'Notas / diferenciadores',v1:'¿El fee mensual arranca desde la firma o desde que el caso de uso entra en producción?
-\¿Las fases de definición y desarrollo están incluidas en el fee mensual o tienen un costo separado?
-\¿El MVP que garantizan en 90 días ya está en producción o es solo un prototipo validado?
-\¿Qué pasa si ejercemos el opt-out a los 90 días — hay alguna penalidad o costo de salida?
-\¿Si contratamos varios casos de uso al mismo tiempo, hay descuento por volumen?
-\¿Las 10 horas/mes de soporte en producción son acumulables si no se usan?
-\¿Los modelos y agentes que construyen son propiedad de IMMSA o de RapidCanvas?
-\¿Los modelos entrenados con datos de IMMSA son propiedad de IMMSA al terminar el contrato?
-\¿El código de los agentes es exportable o solo funciona dentro de la plataforma?
-\¿Qué pasa con los datos de IMMSA si terminamos la relación — cómo se manejan?'},
+  {key:'notas',label:'Notas / diferenciadores',v1:''},
+  {key:'preguntas',label:'❓ Preguntas pendientes',v1:'¿El fee mensual arranca desde la firma o desde que el caso de uso entra en producción?\n¿Las fases de definición y desarrollo están incluidas en el fee mensual o tienen un costo separado?\n¿El MVP que garantizan en 90 días ya está en producción o es solo un prototipo validado?\n¿Qué pasa si ejercemos el opt-out a los 90 días — hay alguna penalidad o costo de salida?\n¿Si contratamos varios casos de uso al mismo tiempo, hay descuento por volumen?\n¿Las 10 horas/mes de soporte en producción son acumulables si no se usan?\n¿Los modelos y agentes que construyen son propiedad de IMMSA o de RapidCanvas?\n¿Los modelos entrenados con datos de IMMSA son propiedad de IMMSA al terminar el contrato?\n¿El código de los agentes es exportable o solo funciona dentro de la plataforma?\n¿Qué pasa con los datos de IMMSA si terminamos la relación — cómo se manejan?'},
 ];
 
-// ── NO PERSISTENCE — página siempre arranca limpia ───────────────────────────
-// Edita y descarga. Al reabrir el archivo descargado, los cambios están guardados en los datos.
+// ── LOCALSTORAGE ──────────────────────────────────────────────────────────────
+const STORE = 'beecker_v3';
+function getStore(){try{return JSON.parse(localStorage.getItem(STORE)||'{}')}catch(e){return{}}}
+function setStore(d){try{localStorage.setItem(STORE,JSON.stringify(d))}catch(e){}}
+
+function saveEdits(){
+  const d=getStore();
+  document.querySelectorAll('[data-save-key]').forEach(el=>{
+    d[el.dataset.saveKey]=el.innerHTML;
+  });
+  setStore(d);
+  const ind=document.getElementById('autosave-ind');
+  ind.classList.add('show');
+  clearTimeout(ind._t);
+  ind._t=setTimeout(()=>ind.classList.remove('show'),2000);
+}
+
+function loadEdits(){
+  const d=getStore();
+  document.querySelectorAll('[data-save-key]').forEach(el=>{
+    if(d[el.dataset.saveKey]!==undefined) el.innerHTML=d[el.dataset.saveKey];
+  });
+}
+
+document.addEventListener('input',e=>{
+  if(e.target.hasAttribute('data-save-key')){
+    clearTimeout(document._st);
+    document._st=setTimeout(saveEdits,600);
+  }
+});
 
 // ── RENDER INITIATIVES ────────────────────────────────────────────────────────
 function makeCard(d){
@@ -439,56 +717,13 @@ function showTab(name){
 
 // ── DOWNLOAD ──────────────────────────────────────────────────────────────────
 function saveHTML(){
-  // 1. Sync edited problem texts back into the initiatives array
-  initiatives.forEach(d=>{
-    const el=document.querySelector(`[data-save-key="prob-${d.id}"]`);
-    if(el) d.problem=el.innerText.trim();
-  });
-
-  // 2. Sync edited vendor names back into vendors array
-  vendors.forEach(v=>{
-    const el=document.querySelector(`[data-save-key="vname-${v.id}"]`);
-    if(el) v.name=el.innerText.trim();
-  });
-
-  // 3. Sync edited comparison table cells back into cmpRows
-  cmpRows.forEach(row=>{
-    vendors.forEach((v,vi)=>{
-      const el=document.querySelector(`[data-save-key="cmp-${row.key}-${v.id}"]`);
-      if(el) row['v'+(vi+1)]=el.innerHTML.replace(/<br\s*\/?>/gi,'\n');
-    });
-  });
-
-  // 4. Serialize the updated JS data into the script tag
-  const scriptContent=`
-const initiatives=${JSON.stringify(initiatives,null,2)};
-const areaColor=${JSON.stringify(areaColor)};
-const areaLabel=${JSON.stringify(areaLabel)};
-const vendors=${JSON.stringify(vendors,null,2)};
-const cmpRows=${JSON.stringify(cmpRows,null,2)};
-`;
-
-  // 5. Clone the document and replace the data section in the script
-  const clone=document.documentElement.cloneNode(true);
-  const scripts=clone.querySelectorAll('script');
-  scripts.forEach(s=>{
-    if(s.textContent.includes('const initiatives=')){
-      s.textContent=s.textContent.replace(
-        /const initiatives=[\s\S]*?const areaColor[\s\S]*?const areaLabel[\s\S]*?const vendors[\s\S]*?const cmpRows[\s\S]*?];/,
-        scriptContent
-      );
-    }
-  });
-
-  // 6. Download
-  const html='<!DOCTYPE html>\n'+clone.outerHTML;
+  const html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
   const blob=new Blob([html],{type:'text/html'});
   const a=document.createElement('a');
   a.href=URL.createObjectURL(blob);
   a.download='beecker_iniciativas.html';
   a.click();
   URL.revokeObjectURL(a.href);
-
   const t=document.getElementById('toast');
   t.classList.add('show');
   clearTimeout(t._t);
@@ -496,7 +731,8 @@ const cmpRows=${JSON.stringify(cmpRows,null,2)};
 }
 
 // ── RESTORE ON LOAD ───────────────────────────────────────────────────────────
-
+setTimeout(loadEdits,0);
 </script>
-</body>
-</html>
+
+
+</body></html>
